@@ -1,0 +1,28 @@
+# Build & cache
+artifacts/
+cache/
+out/
+broadcast/
+coverage/
+typechain/
+types/
+
+# Remix deps cache
+_deps/
+.deps/
+.states/
+.state/
+
+
+# Deploy/state
+deployments/
+.openzeppelin/
+
+# Packages
+node_modules/
+
+# Secrets & noise
+.env
+*.secret
+*.keystore
+*.DS_Store
