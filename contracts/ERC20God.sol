@@ -5,8 +5,9 @@ pragma solidity ^0.8.20;
 import "./ERC20Base.sol";
 
 contract ERC20God is ERC20Base {
-    constructor() ERC20Base("God", "GOD"){}
+    constructor() ERC20Base("God", "GOD", msg.sender){}
 
+    //Todo: make sure the decimal point functionality is handled properly at the moment the ammout would be too large.
     function mintTokensToAddress(address recipient, uint256 amount) external onlyOwner {
         require(totalSupply() + amount <= MAX_SUPPLY, "Exceeding max amount");
         _mint(recipient, amount);
