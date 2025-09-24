@@ -6,8 +6,10 @@ import "@openzeppelin/contracts@5.4.0/access/Ownable.sol";
 
 abstract contract ERC20Base is ERC20, Ownable {
     // 1000000 tokens with 18 decimals.
-    uint256 public constant DECIMALS = 1e18; // 10**18
-    uint256 public constant MAX_SUPPLY = 1_000_000 * DECIMALS;
+    uint8    constant TOKEN_DECIMALS = 18;
+    uint256  constant MAX_SUPPLY     = 1_000_000 * 10**TOKEN_DECIMALS;
+    uint256  constant ETH_IN_WEI_REFUND_PER_1000_TOKENS_IN_DCMLS = 0.5 ether;      // sellback rate
+
 
     constructor(string memory n, string memory s, address initialOwner) ERC20(n, s) Ownable(initialOwner) {}
 
