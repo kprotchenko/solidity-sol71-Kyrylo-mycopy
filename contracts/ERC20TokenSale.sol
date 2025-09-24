@@ -13,6 +13,7 @@ contract ERC20TokenSale is ERC20Base {
         require(tokens + totalSupply() <= MAX_SUPPLY, "Max supply reached");
         _mint(msg.sender, tokens);
     }
+
     function contractBalance() external view returns (uint256) {
         return address(this).balance;
     }
