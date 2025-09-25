@@ -26,3 +26,4 @@ node_modules/
 *.secret
 *.keystore
 *.DS_Store
+.idea/
