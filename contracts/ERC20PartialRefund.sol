@@ -6,8 +6,6 @@ import "./ERC20TokenSale.sol";
 
 contract ERC20PartialRefund is ERC20TokenSale {
     constructor() payable ERC20TokenSale() {}
-    uint256  constant ETH_IN_WEI_REFUND_PER_1000_TOKENS = 0.5 ether;      // sellback rate
-    // uint256 constant REFUNT_RATIO =  ETH_IN_WEI_REFUND_PER_1000_TOKENS / TOKENS_IN_DCMLS_PER_ETH_IN_WEI;//(10**18/2)/(1000*10**18)
 
     function sellBack(uint256 amountOfTokensInDcmls) payable external {
         uint256 amountOfEthForTokensInDcmls = amountOfTokensInDcmls / 2000;
