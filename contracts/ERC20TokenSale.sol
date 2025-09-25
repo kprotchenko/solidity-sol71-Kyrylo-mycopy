@@ -9,7 +9,7 @@ contract ERC20TokenSale is ERC20Base {
     uint256 constant TOKENS_IN_DCMLS_PER_ETH_IN_WEI = 1000 * 10**TOKEN_DECIMALS;
     uint256 constant ETH_IN_WEI_PER_1000_TOKENS_IN_DCMLS   = 1 ether;        // buy price (1 wei for 1000 tokens)
     function pay() payable external {
-        uint256 tokens = (msg.value * TOKENS_IN_DCMLS_PER_ETH_IN_WEI) / ETH_IN_WEI_PER_1000_TOKENS_IN_DCMLS;
+        uint256 tokens = (msg.value * 1000);
         require(tokens + totalSupply() <= MAX_SUPPLY, "Max supply reached");
         _mint(msg.sender, tokens);
     }
