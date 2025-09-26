@@ -20,9 +20,26 @@ deployments/
 
 # Packages
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Secrets & noise
+# Hardhat
+coverage.json
+.nyc_output/
+
+# TypeChain (if used)
+typechain-types/
+
+# Hardhat Ignition outputs
+ignition/deployments/
+
+# Env
 .env
+.env.*
+!.env.example
+# Secrets & noise
 *.secret
 *.keystore
 *.DS_Store
