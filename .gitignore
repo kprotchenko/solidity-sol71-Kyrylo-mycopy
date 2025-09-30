@@ -1,0 +1,46 @@
+# Build & cache
+artifacts/
+cache/
+out/
+broadcast/
+coverage/
+typechain/
+types/
+
+# Remix deps cache
+_deps/
+.deps/
+.states/
+.state/
+
+
+# Deploy/state
+deployments/
+.openzeppelin/
+
+# Packages
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Hardhat
+coverage.json
+.nyc_output/
+
+# TypeChain (if used)
+typechain-types/
+
+# Hardhat Ignition outputs
+ignition/deployments/
+
+# Env
+.env
+.env.*
+!.env.example
+# Secrets & noise
+*.secret
+*.keystore
+*.DS_Store
+.idea/
