@@ -44,3 +44,6 @@ ignition/deployments/
 *.keystore
 *.DS_Store
 .idea/
+# VS Code
+.vscode/
+.wake/
