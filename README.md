@@ -5,7 +5,7 @@
 *****************************************************************************************************
 ```
 # Folowing dependencies needed for project to be deployed locally. Run the comand below in terminal
-
+forge install foundry-rs/forge-std --no-git
 forge install OpenZeppelin/openzeppelin-contracts@v5.4.0 --no-git
 ```
 *****************************************************************************************************
@@ -40,7 +40,7 @@ forge script script/EscrowFactory.s.sol:EscrowFactoryScript \
 forge test --match-path test/EscrowFactory.t.sol -vvvvv
 forge test --match-path test/SimpleEscrow.t.sol -vvvvv
 ```
-
+*****************************************************************************************************
 
 
 ## Foundry
